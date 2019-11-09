@@ -90,10 +90,19 @@ function spotQ(q) {
 }
 function init() {
   if (qType === 'events') {
+    if (!query) {
+      query = 'Snoop Dogg';
+    }
     bitQ(query);
   } else if (qType === 'track') {
+    if (!query) {
+      query = 'Ice Ice Baby';
+    }
     spotQ(query);
   } else if (qType === 'movie') {
+    if (!query) {
+      query = 'The Sixth Sense';
+    }
     omdbQ(query);
   } else if (qType === 'read') {
     fs.readFile('file.txt', 'utf8', (err, msg) => {
